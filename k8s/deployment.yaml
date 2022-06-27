@@ -30,13 +30,6 @@ spec:
         - name: poc-api
           image: canpolatoral/vault-injector-poc:0.1
           imagePullPolicy: Always
-          # imagePullPolicy: IfNotPresent
-#          command:
-#            [ 'sh', '-c', 'source /vault/secrets/config && dotnet VaultInjectorPOC.dll' ]
-#          command:
-#            [ 'source /vault/secrets/config && dotnet VaultInjectorPOC.dll' ]
-#          command:
-#            [ 'source', '/vault/secrets/config', '&&', 'dotnet', 'VaultInjectorPOC.dll' ]
           command: ["/bin/bash"]
           args:
             ['-c', 'source /vault/secrets/config && dotnet VaultInjectorPOC.dll']
